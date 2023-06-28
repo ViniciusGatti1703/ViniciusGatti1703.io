@@ -1,0 +1,232 @@
+/*
+320px - 480px: dispositivos móveis
+481px - 768px: tablets, Ipads
+769px - 1024px: telas pequenas, laptops, tablet em paisagem
+1025px - 1200px: desktops em geral
+1201px - 1600px: telas grandes widescreen
+1601px - acima: TV e telas especificas
+*/
+@media screen and (max-width: 1024px) {
+
+    /* menu hamburguer */
+    .btnMenu {
+        font-size: 50px;
+        padding: 10px;
+        transition: .3s;
+        display: block;
+        color: goldenrod;
+    }
+
+    .menu {
+        width: 100%;
+        height: 78px;
+        /* background-color: rgba(0, 0, 0, .5); */
+        position: fixed;
+        z-index: 100;
+        background: linear-gradient( #1ab1ec 0%,#31b9d1d7 );
+    }
+
+    .logo {
+        width: 10%;
+        height: 70px;
+        line-height: 70px;
+        color: gold;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo:hover {
+        color: goldenrod;
+    }
+
+    .logo i {
+        font-size: 60px;
+    }
+
+    .logo span {
+        font-size: 1.5em;
+        padding-left: 20px;
+        font-weight: 800;
+    }
+
+    /* navbar */
+    .navbar {
+        height: 85px;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        display: flex;
+        align-items: center;
+
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    ul.open {
+        overflow: visible;
+    }
+
+    .navbar li {
+        padding: 0 5px;
+    }
+
+    .navbar li a {
+        height: 70px;
+        line-height: 70px;
+        padding: 20px 25px;
+    }
+
+    .navbar li a:hover:not(.sub a:hover) {
+        background-color: rgba(0, 0, 255, .5);
+    }
+
+    .sub li:hover {
+        background-color: rgba(0, 0, 255, .5);
+    }
+
+    ul.sub {
+        position: absolute;
+        display: none;
+        min-width: 160px;
+        background-color: rgba(0, 0, 0, .5);
+        padding: 0;
+        text-align: center;
+
+        right: 150px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .cardProd {
+        width: 40%;
+    }
+
+    .contact-inner li input[type=text],
+    .contact-inner li input[type=email],
+    .contact-inner li textarea {
+        width: 100%;
+    }
+
+
+    .formBtn {
+        width: 100%;
+    }
+
+    .footer-container a span {
+        display: none;
+
+    }
+
+    .home-container {
+        position: relative;
+        width: 100vw;
+        height: auto;
+    }
+
+    .home-inner h1 {
+        font-size: 2.5em;
+
+    }
+
+    .home-inner h2 {
+        font-size: 1.2em;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-inner{
+        padding-top: 5.5em;
+    }
+    
+    .home-inner h1 {
+        font-size: 1.5em;
+    }
+
+    .home-inner h2 {
+        font-size: 1.8em;
+
+    }
+    .cardProd {
+        width: 100%;
+    }
+
+    #services{
+        background-color: black;
+        color: white;
+        text-transform: capitalize;
+    }
+    
+    .services-container{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding: 5em 0;
+    }
+    
+    .services-inner{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1em;
+    }
+    
+    .services-inner table{
+        width: 100%;
+    }
+    
+    .services-inner table th{
+        font-size: 1.2em;
+    }
+    
+    .services-inner table td{
+        font-size: 1.5em;
+    }
+    
+    /*#region domain*/
+
+
+.domain-container li input[type=text]:focus{
+   width: 100%;
+    }
+    .contact-container{
+        width: 100%;
+    
+    }
+    .contact-inner li input[type=text],
+    .contact-inner li input[type=email],
+    .contact-inner li textarea {
+        width: 100%;
+    }
+/*#endregion */
+
+/*#region footer*/
+.footer-container ul{
+    display: none;
+}
+/*#endregion */
+
+.footer-containerLogin ul{
+    display: none;
+}
+
+.footer-containerLogin a{
+    display: none;
+}
+
+.contact-innerLogin{
+    width: 100%;
+    font-size: .7em;
+}
+
+.geral-privacity {
+  width: 100%;
+  font-size: 1em;
+}
+
+.geral-privacity h4 {
+    padding: 1em 0;
+  font-size: 1.2em;
+}
+}

@@ -1,0 +1,874 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Merriweather-Italic.ttf';
+}
+
+/* #region global */
+@font-face {
+    font-family: 'Merriweather-Italic.ttf';
+    src: url('/Resource/font/Merriweather-Italic.ttf');
+}
+
+html{
+    font-size: 28px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    font-size: 14px; 
+    overflow-x: hidden;
+    background-color: rgb(68, 25, 223);
+}
+
+h1{
+    font-size: 5em;
+    font-weight: 100;
+}
+
+h2{
+    font-size: 4em;
+    font-weight: 100; 
+}
+
+h4{
+    font-size: 3em;
+    font-weight: 100; 
+}
+
+h5{
+    font-size: 1.2em;
+    font-weight: 100; 
+}
+
+p{
+    font-size: 1.2em;
+}
+
+a{
+    font-size: 1.2em;
+    transition: .3s;
+    text-transform: capitalize;
+    color: white;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+iframe{
+    filter: invert(100%);
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding: 50px 0;
+}
+/* #endregion */
+
+/* #region header */
+.container{
+    width: 100%;
+    height: auto;
+}
+
+.btnDefault{
+    background-color: darkblue;
+    padding: 1em 2.5em;
+    color: white;
+    margin: 2.5em auto;
+    border: none;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.btnDefault:hover{
+    background-color: black;
+    transition: .3s;
+}
+
+/* menu hamburguer */
+
+.btnMenu{
+    font-size: 50px;
+    padding: 10px;
+    transition: .3s;
+    display: none;
+    color: black;
+}
+
+.btnMenu:hover{
+    color: darkblue;
+    transition: .3s;
+
+}
+.menu{
+    width: 100%;
+    height: 75px;
+    /* background-color: rgba(0, 0, 0, .5); */
+    position: fixed;
+    z-index: 100;
+    background: linear-gradient( #1ab1ec 0%,#31b9d1d7 );
+ 
+}
+.menu img{
+    width: 100px;
+    height: 78px;
+    padding: .2em;
+}
+
+.logo:hover{
+    color:aqua
+}
+
+.logo i{
+    font-size: 60px;
+}
+
+.logo span{
+    font-size: 1.5em;
+    padding-left: 20px;
+    font-weight: 800;
+}
+
+.sabesp:hover{
+    color:aqua;
+}
+
+.sabesp i{
+    font-size: 30px;
+}
+
+.sabesp span{
+    font-size: 1em;
+    padding-left: 20px;
+    font-weight: 800;
+    padding: auto;
+}
+
+.volks:hover{
+    color:aqua;
+    
+}
+
+.volks span{
+    color:white;
+    font-size: 1em;
+    padding-left: 20px;
+    font-weight: 800;
+    
+}
+.navbar{
+    height: 85px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li{
+    padding: 0 5px;
+}
+
+.navbar li a{
+    height: 70px;
+    line-height: 70px;
+    padding: 20px 25px;
+}
+
+.navbar li a:hover:not(.sub a:hover){
+    background-color: rgba(21, 7, 219, 0.884);
+}
+
+.sub li:hover{
+    background-color: rgba(0, 0, 255, .5);
+}
+
+ul.sub{
+    position: absolute;
+    display: none;
+    min-width: 160px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 0;
+    text-align: center;
+}
+/* #endregion */
+
+/* #region home */
+
+.home-container{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    /* background-image: url('../img/wallpapersden.com_drogon-cool-game-of-thrones_2480x1754.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.home-inner{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    text-align: center;
+}
+
+
+/* #endregion */
+
+/* #region about */
+#about{
+    background-image: url('https://wallpaperaccess.com/full/3124540.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8.5em 0;
+    color:red;
+}
+
+#about h3{
+    color: red;
+    width: 90%;
+    height: 120px;
+    line-height: 120px;
+    font-size:2em;
+}
+.about-container{
+    width: 90%;
+    color: white;
+    text-align: center;
+}
+
+.card{
+    margin-top: 4em;
+}
+
+.cardTitulo{
+    height: 120px;
+    line-height: 120px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+}
+
+.card li{
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.card li img{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    margin: 2.5em 0;
+    border: 4px solid rgb(71, 6, 221);
+}
+
+.cardStars{
+    color: blue;
+    background-color: rgba(255, 255, 255, .2);
+    font-size: 2em;
+    height: 100px;
+    line-height: 100px;
+}
+
+.cardCargo{
+    color: black;
+    background-color: rgba(255, 255, 255, .2);
+    font-size: .5em;
+    height: 50px;
+    line-height: 50px;
+    
+    
+}
+
+.socialMedia{
+    color: white;
+    background-color: rgba(241, 7, 7, 0.2);
+    font-size: 2em;
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 50px;
+    transition: 1.3s;
+}
+
+.socialMedia i:hover{
+    color: darkblue;
+    transition: .3s;
+    cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region emphasis */
+
+.carousel{
+    width: 100%;
+    background-color: black;
+}
+
+.carousel-inner{
+    width: 100%;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.imgFit{
+    width: 100%;
+    height: 25%;
+}
+
+/* #endregion */
+
+
+/*#region products */
+#products{
+    background-color: black;
+    padding: 5em 0;
+    text-align: center;
+    color: white;
+    background-image: url('https://www.vargemgrandepaulista.sp.gov.br/site/wp-content/uploads/2019/05/drops-of-water-578897_1280-864x380.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8.5em 0;
+}
+
+#products h4{
+    margin-bottom: 1.5em;
+}
+
+.products-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cardProd{
+    width: 20%;
+    text-align: center;
+    color: white;
+    margin: 2em .5em;
+}
+
+.cardProd li{
+    height: 60px;
+    line-height: 60px;
+    /* background-color: white; */
+    color: white;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.cardProd li:last-child{
+    height: 150px;
+    line-height: 150px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+.cardProd li.price{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: blue;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    /* background-color: darkblue; */
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: -50px;
+    background-color: rgba(184, 21, 0, 0.801);
+}
+
+.cardProd li.title{
+    color: white;
+    height: 130px;
+    line-height: 130px;
+    border-radius: 10px 10px 0 0;
+    /* background-color:darkred; */
+    font-size: 2em;
+    text-transform: capitalize;
+    padding-top: .8em;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.recomended li:not(:first-child){
+    color: white;
+    background-color: rgba(244, 248, 7, 0.466)!important;
+
+}
+
+
+
+
+/*#endregion */
+
+/*#region domain*/
+#domain{
+    background-image: url('../img/daenerys-targaryen-emilia-clarke-game-of-thrones-3440x1440-1126.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 25em 0;
+    color: white;
+    text-align: center;
+   
+}
+
+.domain-container{
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.domain-container li{
+    height: 100px;
+    line-height: 100px;
+    margin-top: 2.5em;
+}
+
+.domain-container li input[type=text]{
+background-color:rgba(255, 255, 255, .8);
+width: 60%;
+padding: .8em;
+font-size: 1.2em;
+border: none;
+border-radius: 8px;
+
+}
+
+.domain-container li input[type=text]:focus{
+    background-color:rgba(255, 255, 255, 1);
+    outline: none;
+    }
+/*#endregion */
+
+
+/*#region services */
+
+#services{
+    background-color: black;
+    color: white;
+    text-transform: capitalize;
+}
+
+.services-container{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 5em 0;
+}
+
+.services-inner{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.services-inner table{
+    width: 100%;
+    margin: 6em auto;
+}
+
+.services-inner table th{
+    font-size: 1.8em;
+    font-weight: 900;
+    padding-bottom: 10px ;
+    border-bottom: 1px solid white;
+}
+
+.services-inner table td{
+    font-size: 1.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+}
+
+.services-inner table td a{
+    height: 2.5em;
+    line-height: 2.5em;
+    padding: 5px 15px !important;
+}
+/*linhas pares (even) */
+.tabela tbody tr:nth-child(even){
+    background-color: #8f0702;
+}
+/*linhas impares (odd) */
+.tabela tbody tr:nth-child(odd){
+    background-color: darkgreen;
+}
+
+/*#endregion */
+
+/*#region localization*/
+#localization{
+    background: black;
+    color: white;
+    padding: 5em 0;
+    text-align: center;
+}
+
+.localization-container{
+    width: 100%;
+    padding: 2em 0;
+}
+
+
+/*#endregion */
+
+/*#region-contact*/
+#contact{
+    background-image: url('https://wallpaperaccess.com/full/2489630.jpg');
+    /* background-color: darkblue; */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8.5em 0;
+    color: black;
+    text-align:center;
+}
+
+.contact-container{
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.contact-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em 0 2.5em 0;
+
+}
+
+.contact-inner li{
+    padding: 20px;
+
+}
+
+.contact-inner li input[type=text],
+.contact-inner li input[type=email],
+.contact-inner li textarea{
+    background-color: rgba(255, 255, 255, .8);
+    width: 60%;
+    padding: 10px;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 8px;
+    color:black;
+}
+
+
+.contact-inner li input[type=text]:focus,
+.contact-inner li input[type=email]:focus,
+.contact-inner li textarea:focus{
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
+   
+}
+
+.formBtn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    
+}
+/*#endregion*/
+/*#endregion */
+
+/*#region footer*/
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.footer-container ul li{
+height: 30px;
+line-height: 30px;
+opacity: .6;
+transition: .3s;
+color: gold;
+}
+
+.footer-container ul li:hover,.footer-container a.logo:hover{
+    opacity: 1;
+    transition: .3s;
+    color: gold;
+    }
+
+    .footer-container a{
+        opacity: .6;
+        transition: .3s;
+        color: white;
+    }
+
+    .footer-container a.logo{
+        opacity: .6;
+        transition: .3s;
+        
+    }
+
+    .footer-container h5{
+        color: gold;
+        opacity: .6;
+    }
+/*#endregion */
+
+
+/* #region login */
+#login {
+    background-image: url('https://t4.ftcdn.net/jpg/01/22/71/95/360_F_122719584_A863mvJEcEAnqmGQ4ky6RbXEhsHKw95x.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* background-color: black; */
+    color: Yellow;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 6em 0;
+}
+
+#login h4 {
+    padding: 2em 0;
+}
+
+#login a {
+    padding: 2em 0;
+    color: yellow;
+}
+
+
+.contact-innerLogin li input[type=text],
+.contact-innerLogin li input[type=password]{
+    background-color: rgba(255, 255, 255, .8);
+    width: 80%;
+    padding: 10px;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: black;
+}
+
+.contact-innerLogin li input[type=text]:focus,
+.contact-innerLogin li input[type=password]:focus
+{
+    background-color: white;
+    outline: none;
+   
+}
+
+.contact-containerLogin{
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.contact-innerLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em 0 2.5em 0;
+
+}
+
+.contact-innerLogin li{
+    padding: 20px;
+
+}
+
+.formbtn{
+    display: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+/* #endregion login */
+
+/* #region thanks.html */
+
+.geral {
+    background-image: url('../img/palmas.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 1980px 1020px;
+    /* background-color: #03020b; */
+    color: yellow;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 30em 0;
+}
+
+.geral h4 {
+    padding: 2.5em 0;
+  
+}
+
+/* #endregion thanks.html */
+
+/*#footer-containerLogin*/
+
+.footer-containerLogin{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.footer-containerLogin ul li{
+height: 30px;
+line-height: 30px;
+opacity: .6;
+transition: .3s;
+color: aqua;
+}
+
+.footer-containerLogin ul li:hover,.footer-container a.logo:hover{
+    opacity: 1;
+    transition: .3s;
+    color: aqua;
+    }
+
+    .footer-containerLogin a{
+        opacity: .6;
+        transition: .3s;
+        color: white;
+    }
+
+    .footer-containerLogin a.logo:hover{
+        opacity: .6;
+        transition: .3s;
+        color: aqua;
+    }
+
+    .footer-containerLogin h5{
+        color: aqua;
+        opacity: .6;
+    }
+
+/* #end region*/
+
+.geral-privacity {
+    background-image: url('https://e0.pxfuel.com/wallpapers/343/824/desktop-wallpaper-background-t-cloud-security.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 1980px 1020px;
+    /* background-color: #03020b; */
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 30em 0;
+}
+
+.geral-privacity h4 {
+    padding: 2em 0;
+  
+}
+
+.geral-privacity h2 {
+    padding: 2em 0;
+  color: goldenrod;
+}
+
+.RedeSocial{
+    color: white;
+    background-color: black;
+    font-size: 2em;
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 50px;
+    transition: 1.3s;
+}
+
+.RedeSocial i:hover{
+    color:aqua;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.footer-container h5{
+    color: aqua;
+    opacity: .6;
+}
+
+
+/* products */
+
+#Products{
+    background-color: #11101d;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .Products-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    column-gap: .8rem;
+    row-gap: .6rem;
+    padding: 1rem 0 0 4rem;
+  }
+  
+  .Products-inner{
+    position: relative;
+  }
+  
+  .Products-inner img{
+    width: 100%;
+    height: auto;
+    filter: saturate(80%);
+    filter: brightness(100%);
+  }
+  
+  .Products-inner img:hover{
+    transition: all .5s;
+    filter: saturate(1);
+  }
+  
+  .Products-inner p{
+    position: absolute;
+    padding: 10px;
+    bottom: 5px;
+    background-color: rgba(255, 255, 255, 7);
+    color: #11101d;
+    font-weight: 600;
+    transform: scale(0);
+    opacity: 100;
+  }
+  
+  .Products-inner:hover{
+    transition: all .5s;
+    filter: saturate(60%);
+  }
+  
+  .Products-inner:hover p{
+    transform: scale(1);
+    transition: all .5s linear;
+    opacity: 100;
+  }    
